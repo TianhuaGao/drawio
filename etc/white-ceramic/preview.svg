@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="84" viewBox="0 0 140 84">
+  <defs>
+    <linearGradient id="ceramic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F7F6F3"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 8 4 0 8z" fill="#5F5F5C"/>
+    </marker>
+  </defs>
+  <rect width="140" height="84" fill="#FDFDFC"/>
+  <text x="70" y="9" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="5.5" font-weight="700" text-anchor="middle">WHITE CERAMIC CONTROL</text>
+  <g fill="none" stroke="#5F5F5C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 29H29" marker-end="url(#arrow)"/>
+    <path d="M43 29H49" marker-end="url(#arrow)"/>
+    <path d="M77 29H88" marker-end="url(#arrow)"/>
+    <path d="M116 29H125" marker-end="url(#arrow)"/>
+    <path d="M119 29V64H96" marker-end="url(#arrow)"/>
+    <path d="M62 64H36V37" marker-end="url(#arrow)"/>
+  </g>
+  <text x="2" y="31" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="4.6">r(t)</text>
+  <circle cx="36" cy="29" r="7" fill="url(#ceramic)" stroke="#B8B8B5" stroke-width=".8" filter="url(#shadow)"/>
+  <text x="36" y="28" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="6" text-anchor="middle">+</text>
+  <text x="36" y="34" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="6" text-anchor="middle">−</text>
+  <rect x="49" y="20" width="28" height="18" rx="3" fill="url(#ceramic)" stroke="#B8B8B5" stroke-width=".8" filter="url(#shadow)"/>
+  <text x="63" y="30.5" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="4.2" text-anchor="middle">C(s)</text>
+  <rect x="88" y="20" width="28" height="18" rx="3" fill="url(#ceramic)" stroke="#B8B8B5" stroke-width=".8" filter="url(#shadow)"/>
+  <text x="102" y="30.5" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="4.2" text-anchor="middle">G(s)</text>
+  <circle cx="119" cy="29" r="1.6" fill="#5F5F5C"/>
+  <text x="128" y="31" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="4.6">y(t)</text>
+  <rect x="62" y="57" width="34" height="14" rx="3" fill="url(#ceramic)" stroke="#B8B8B5" stroke-width=".8" filter="url(#shadow)"/>
+  <text x="79" y="65.5" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="4.2" text-anchor="middle">H(s)</text>
+  <g transform="translate(46 77)">
+    <rect width="8" height="4" rx="1" fill="#FDFDFC" stroke="#B8B8B5" stroke-width=".5"/>
+    <rect x="10" width="8" height="4" rx="1" fill="#FFFFFF" stroke="#B8B8B5" stroke-width=".5"/>
+    <rect x="20" width="8" height="4" rx="1" fill="#E7E7E7" stroke="#B8B8B5" stroke-width=".5"/>
+    <rect x="30" width="8" height="4" rx="1" fill="#9A9A9A" stroke="#777774" stroke-width=".5"/>
+    <rect x="40" width="8" height="4" rx="1" fill="#1A1A1A"/>
+  </g>
+</svg>

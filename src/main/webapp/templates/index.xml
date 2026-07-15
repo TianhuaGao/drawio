@@ -117,6 +117,7 @@
 <template url="cloud/ibm/ibm_vcenter_server_platform.xml" name="Ibm vcenter server platform" libs="general;ibm" tags="Ibm;vcenter;server;platform"/>
 <template url="cloud/ibm/ibm_vpc_architecture.xml" name="Ibm vpc architecture" libs="general;ibm" tags="Ibm;vpc;architecture"/>
 <template url="engineering/cabinet.xml" name="Cabinet" libs="general;cabinets" tags="Cabinet"/>
+<template url="engineering/white_ceramic_control.xml" name="White Ceramic Control System" libs="whiteCeramic;general" tags="White;Ceramic;Control;Feedback;Engineering"/>
 <template url="engineering/electrical_1.xml" name="Electrical 1" libs="general;electrical" tags="Electrical"/>
 <template url="engineering/electrical_2.xml" name="Electrical 2" libs="general;electrical" tags="Electrical"/>
 <template url="flowcharts/cross_functional_flowchart_1.xml" name="Cross functional flowchart 1" libs="general;flowchart" tags="Cross;functional;flowchart"/>

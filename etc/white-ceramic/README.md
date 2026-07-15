@@ -1,0 +1,80 @@
+# White Ceramic Engineering style pack
+
+This pack provides an editable control-system visual language without adding a
+custom renderer or changing draw.io's global default styles.
+
+## Runtime files
+
+- src/main/webapp/libraries/white-ceramic-engineering.mxlibrary contains the
+  draggable blocks, summing points, connectors, junction and complete loop.
+- src/main/webapp/js/PreConfig.js registers the library in the default sidebar
+  set and adds the ceramic colour tokens.
+- src/main/webapp/templates/engineering/white_ceramic_control.xml is the
+  editable starter diagram.
+- src/main/webapp/templates/engineering/white_ceramic_control.png is its
+  template-browser thumbnail.
+
+The library and template use full inline style strings. Diagrams keep their
+appearance when copied, exported or opened without this fork.
+
+## Style contract
+
+| Token | Value |
+| --- | --- |
+| Warm white | #FDFDFC |
+| Ceramic white | #FFFFFF |
+| Ceramic gradient | #F7F6F3 |
+| Pale gray | #E7E7E7 |
+| Divider gray | #D7D7D4 |
+| Ceramic border | #B8B8B5 |
+| Graphite gray | #9A9A9A |
+| Dark ceramic border | #7B7B78 |
+| Secondary text | #777774 |
+| Signal graphite | #5F5F5C |
+| Near black | #1A1A1A |
+| Shadow black | #000000 |
+| Block radius | 8 px (absoluteArcSize=1;arcSize=16) |
+| Connector | 2 px, round joins, classicThin arrow |
+| Contact shadow | 18%, 0/4 px offset, 6 px blur |
+
+Use HTML italics for simple engineering variables, for example
+Controller &lt;i&gt;C(s)&lt;/i&gt;. Reserve MathJax for equations that need real
+mathematical layout.
+
+## Local use
+
+From src/main/webapp, start any static HTTP server and open the root URL:
+
+~~~sh
+python3 -m http.server 8080
+~~~
+
+The **White Ceramic Engineering** palette is available in the left sidebar.
+Expand its title if the palette body is collapsed, then drag individual
+components or the complete **Feedback Control Loop** onto the page. Use
+**File → New**, then search for **White Ceramic**, to create the starter
+template.
+
+## Validation and preview
+
+Run the validation and preview commands below from the repository root.
+
+Validate the XML assets:
+
+~~~sh
+xmllint --noout \
+  src/main/webapp/libraries/white-ceramic-engineering.mxlibrary \
+  src/main/webapp/templates/engineering/white_ceramic_control.xml \
+  src/main/webapp/templates/index.xml
+~~~
+
+Regenerate the thumbnail from the maintained SVG source:
+
+~~~sh
+google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars \
+  --screenshot=src/main/webapp/templates/engineering/white_ceramic_control.png \
+  --window-size=140,84 "file://$PWD/etc/white-ceramic/preview.svg"
+~~~
+
+If the library grows substantially, split it into multiple libs entries in
+PreConfig.js instead of adding a custom stencil renderer prematurely.
