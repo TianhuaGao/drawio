@@ -86,7 +86,6 @@ Pages artifact. It deliberately excludes `WEB-INF/` and `META-INF/`: servlet
 containers hide those directories, but a generic static host would expose
 their server-only configuration and Java archives as ordinary files.
 
-The workflow currently deploys pushes from `dev` and the initial
-`feature/white-ceramic-style-pack` release branch. A custom domain must be set
-in the repository Pages settings or Pages API and in DNS; adding a `CNAME`
-file to an Actions artifact does not configure the domain by itself.
+The workflow deploys pushes from `dev`. A custom domain must be set in the
+repository Pages settings or Pages API and in DNS; adding a `CNAME` file to an
+Actions artifact does not configure the domain by itself.
