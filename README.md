@@ -1,43 +1,45 @@
 # Engineering Paper Diagram Styles
 
 > [!IMPORTANT]
-> 本仓库是基于 [jgraph/drawio](https://github.com/jgraph/drawio) 的个人非官方
-> fork，目标是扩展适合控制专业与计算机专业论文的可编辑绘图风格、组件库和
-> 模板。它与 draw.io 官方没有隶属、赞助或背书关系。
+> This repository is an unofficial personal fork of
+> [jgraph/drawio](https://github.com/jgraph/drawio). Its purpose is to add
+> editable, publication-oriented style packs, component libraries, and
+> templates for control engineering and computer science. It is not
+> affiliated with, sponsored by, or endorsed by draw.io.
 
-## 在线入口
+## Online Editor
 
-**[打开本 fork 的在线编辑器](https://tianhuagao.github.io/drawio/)**
+**[Open the hosted editor](https://tianhuagao.github.io/drawio/)**
 
-该入口由本仓库的 `dev` 分支通过 GitHub Pages 自动部署，可直接在浏览器中
-绘图、保存 `.drawio` 文件，并导出常用图片或文档格式，无需在本机启动服务。
-这是纯静态前端部署，依赖服务器或第三方凭据的云盘集成与服务端转换功能不在
-当前保证范围内。
+The editor is automatically deployed from this repository's `dev` branch via
+GitHub Pages. It can be used directly in a browser to create diagrams, save
+`.drawio` files, and export common image or document formats without running a
+local server. This is a static client-side deployment; cloud integrations and
+server-side conversion features that require backend services or third-party
+credentials are outside its current support scope.
 
-## Fork 目的
+## Purpose of This Fork
 
-这个 fork 不以复制一套普通 draw.io 网站为终点，而是希望逐步建立面向学术
-论文和技术报告的工程绘图体系：
+This fork aims to develop a coherent diagram system for academic papers and
+technical reports instead of merely reproducing a generic draw.io deployment:
 
-- **控制专业**：控制系统框图、闭环反馈、求和点、状态估计、鲁棒/自适应控制、
-  飞控与机器人系统架构等风格和模板；
-- **计算机专业**：算法流程、机器学习与神经网络架构、数据管线、软件系统、
-  分布式系统和实验流程等风格和模板；
-- **论文表达**：强调统一的视觉语法、可编辑结构、克制的配色、清晰的连接关系，
-  以及适合 SVG、PNG、PDF 输出的版式。
+- **Control engineering:** styles and templates for control-system block
+  diagrams, closed-loop feedback, summing points, state estimation,
+  robust/adaptive control, flight control, and robotic system architectures.
+- **Computer science:** styles and templates for algorithms, machine-learning
+  and neural-network architectures, data pipelines, software systems,
+  distributed systems, and experimental workflows.
+- **Publication-oriented design:** a consistent visual language, fully
+  editable structures, restrained colour palettes, clear connectivity, and
+  layouts suitable for SVG, PNG, and PDF output.
 
-首个已实现风格包是 **White Ceramic Engineering**，目前包含 10 个可拖拽
-控制工程组件、配色方案和一张可编辑闭环控制系统模板。实现和维护说明见
-[`etc/white-ceramic/README.md`](etc/white-ceramic/README.md)。后续风格会在
-实际论文绘图需求中逐步扩展；上述方向是项目目标，不表示所有类型均已完成。
-
-### English summary
-
-This is an unofficial personal fork of draw.io focused on editable,
-publication-oriented style packs and templates for control engineering and
-computer science diagrams. The first available pack is **White Ceramic
-Engineering**. Use the hosted editor at
-[tianhuagao.github.io/drawio](https://tianhuagao.github.io/drawio/).
+The first implemented style pack is **White Ceramic Engineering**. It currently
+provides 10 draggable control-engineering components, a colour scheme, and an
+editable closed-loop control-system template. See
+[`etc/white-ceramic/README.md`](etc/white-ceramic/README.md) for implementation
+and maintenance details. Additional styles will be developed from real paper
+figure requirements; the areas listed above describe the project direction,
+not a claim that every diagram type is already available.
 
 ---
 
