@@ -1,3 +1,48 @@
+# Engineering Paper Diagram Styles
+
+> [!IMPORTANT]
+> This repository is an unofficial personal fork of
+> [jgraph/drawio](https://github.com/jgraph/drawio). Its purpose is to add
+> editable, publication-oriented style packs, component libraries, and
+> templates for control engineering and computer science. It is not
+> affiliated with, sponsored by, or endorsed by draw.io.
+
+## Online Editor
+
+**[Open the hosted editor](https://tianhuagao.github.io/drawio/)**
+
+The editor is automatically deployed from this repository's `dev` branch via
+GitHub Pages. It can be used directly in a browser to create diagrams, save
+`.drawio` files, and export common image or document formats without running a
+local server. This is a static client-side deployment; cloud integrations and
+server-side conversion features that require backend services or third-party
+credentials are outside its current support scope.
+
+## Purpose of This Fork
+
+This fork aims to develop a coherent diagram system for academic papers and
+technical reports instead of merely reproducing a generic draw.io deployment:
+
+- **Control engineering:** styles and templates for control-system block
+  diagrams, closed-loop feedback, summing points, state estimation,
+  robust/adaptive control, flight control, and robotic system architectures.
+- **Computer science:** styles and templates for algorithms, machine-learning
+  and neural-network architectures, data pipelines, software systems,
+  distributed systems, and experimental workflows.
+- **Publication-oriented design:** a consistent visual language, fully
+  editable structures, restrained colour palettes, clear connectivity, and
+  layouts suitable for SVG, PNG, and PDF output.
+
+The first implemented style pack is **White Ceramic Engineering**. It currently
+provides 10 draggable control-engineering components, a colour scheme, and an
+editable closed-loop control-system template. See
+[`etc/white-ceramic/README.md`](etc/white-ceramic/README.md) for implementation
+and maintenance details. Additional styles will be developed from real paper
+figure requirements; the areas listed above describe the project direction,
+not a claim that every diagram type is already available.
+
+---
+
 # draw.io
 
 ## About
