@@ -1,0 +1,60 @@
+name: Deploy custom draw.io site
+
+on:
+  push:
+    branches:
+      - dev
+      - feature/white-ceramic-style-pack
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            LICENSE
+            src/main/webapp
+          sparse-checkout-cone-mode: false
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Stage public web application
+        run: |
+          mkdir -p "$RUNNER_TEMP/site"
+          rsync -a \
+            --exclude='/WEB-INF/' \
+            --exclude='/META-INF/' \
+            src/main/webapp/ "$RUNNER_TEMP/site/"
+          cp LICENSE "$RUNNER_TEMP/site/LICENSE.txt"
+          test ! -e "$RUNNER_TEMP/site/WEB-INF"
+          test ! -e "$RUNNER_TEMP/site/META-INF"
+          test -f "$RUNNER_TEMP/site/index.html"
+          test -f "$RUNNER_TEMP/site/LICENSE.txt"
+          test -f "$RUNNER_TEMP/site/libraries/white-ceramic-engineering.mxlibrary"
+          test -f "$RUNNER_TEMP/site/templates/engineering/white_ceramic_control.xml"
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

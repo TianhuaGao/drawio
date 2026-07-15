@@ -78,3 +78,15 @@ google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars \
 
 If the library grows substantially, split it into multiple libs entries in
 PreConfig.js instead of adding a custom stencil renderer prematurely.
+
+## Public deployment
+
+`.github/workflows/pages.yml` publishes `src/main/webapp` as a static GitHub
+Pages artifact. It deliberately excludes `WEB-INF/` and `META-INF/`: servlet
+containers hide those directories, but a generic static host would expose
+their server-only configuration and Java archives as ordinary files.
+
+The workflow currently deploys pushes from `dev` and the initial
+`feature/white-ceramic-style-pack` release branch. A custom domain must be set
+in the repository Pages settings or Pages API and in DNS; adding a `CNAME`
+file to an Actions artifact does not configure the domain by itself.
