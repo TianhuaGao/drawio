@@ -35,7 +35,7 @@ technical reports instead of merely reproducing a generic draw.io deployment:
 
 The first implemented style pack is **White Ceramic Engineering**. It currently
 provides 13 draggable control-engineering components, including dedicated
-logic-gate, frame-selector, and atomic-transition shapes, plus a colour scheme
+logic-gate, ownership-arbiter, and atomic-transition shapes, plus a colour scheme
 and an editable closed-loop control-system template. See
 [`etc/white-ceramic/README.md`](etc/white-ceramic/README.md) for implementation
 and maintenance details. Additional styles will be developed from real paper
