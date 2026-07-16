@@ -34,8 +34,9 @@ technical reports instead of merely reproducing a generic draw.io deployment:
   layouts suitable for SVG, PNG, and PDF output.
 
 The first implemented style pack is **White Ceramic Engineering**. It currently
-provides 10 draggable control-engineering components, a colour scheme, and an
-editable closed-loop control-system template. See
+provides 13 draggable control-engineering components, including dedicated
+logic-gate, frame-selector, and atomic-transition shapes, plus a colour scheme
+and an editable closed-loop control-system template. See
 [`etc/white-ceramic/README.md`](etc/white-ceramic/README.md) for implementation
 and maintenance details. Additional styles will be developed from real paper
 figure requirements; the areas listed above describe the project direction,
