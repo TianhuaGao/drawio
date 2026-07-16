@@ -6,7 +6,8 @@ custom renderer or changing draw.io's global default styles.
 ## Runtime files
 
 - src/main/webapp/libraries/white-ceramic-engineering.mxlibrary contains the
-  draggable blocks, summing points, connectors, junction and complete loop.
+  draggable process blocks, logic gate, ownership arbiter, atomic transition,
+  summing points, connectors, junction and complete loop.
 - src/main/webapp/js/PreConfig.js registers the library in the default sidebar
   set and adds the ceramic colour tokens.
 - src/main/webapp/templates/engineering/white_ceramic_control.xml is the
@@ -36,6 +37,31 @@ appearance when copied, exported or opened without this fork.
 | Block radius | 8 px (absoluteArcSize=1;arcSize=16) |
 | Connector | 2 px, round joins, classicThin arrow |
 | Contact shadow | 18%, 0/4 px offset, 6 px blur |
+
+## Shape semantics
+
+The palette uses a deliberately small shape vocabulary. Shape changes encode
+meaning; they are not decorative variants of the same block.
+
+| Shape | Meaning |
+| --- | --- |
+| Rounded rectangle | Continuous controller, state, process or actuator block |
+| Rounded hexagon | Authorization, validity or other guarded logic |
+| Strong rounded rectangle (arbiter) | Frame-exclusive ownership arbitration |
+| Top-wide trapezoid | Actual data multiplexer: candidate signals enter the wide side and one selected signal leaves the narrow side |
+| Capsule | Atomic transition, lifecycle action or same-frame handoff |
+| Circle | Summing point or signal junction only |
+
+Keep the ceramic gradients, border strengths, typography and shadows from the
+library entries when adapting these shapes. Do not use a logic shape merely to
+add visual variety, and do not use a diamond unless the diagram represents a
+branching flowchart decision rather than an architecture-level gate.
+
+Classify the real inputs and outputs before choosing a shape. Authorization and
+validity conditions are control inputs to an ownership arbiter; they are not
+candidate data signals, so they do not make the arbiter a multiplexer. Keep all
+text inside its block with explicit line breaks, adequate internal spacing and
+a final-size render check; never rely on clipping or a white mask to hide text.
 
 Use HTML italics for simple engineering variables, for example
 Controller &lt;i&gt;C(s)&lt;/i&gt;. Reserve MathJax for equations that need real

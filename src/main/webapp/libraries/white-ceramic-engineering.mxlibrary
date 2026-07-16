@@ -1,4 +1,4 @@
-<mxlibrary tags="white ceramic engineering control system block summing signal connector feedback junction">
+<mxlibrary tags="white ceramic engineering control system block logic gate arbiter arbitration ownership selector mux transition summing signal connector feedback junction">
 <![CDATA[
 [
   {
@@ -21,6 +21,27 @@
     "w": 230,
     "h": 72,
     "xml": "<mxGraphModel><root><mxCell id=\"0\"/><mxCell id=\"1\" parent=\"0\"/><mxCell id=\"2\" value=\"Plant Model &lt;i&gt;G(s)&lt;/i&gt;\" style=\"shape=rectangle;perimeter=rectanglePerimeter;rounded=1;absoluteArcSize=1;arcSize=16;whiteSpace=wrap;html=1;fillColor=#FFFFFF;gradientColor=#F7F6F3;gradientDirection=south;strokeColor=#B8B8B5;strokeWidth=1;shadow=1;shadowColor=#000000;shadowOpacity=18;shadowOffsetX=0;shadowOffsetY=4;shadowBlur=6;fontColor=#1A1A1A;fontFamily=Inter,Helvetica,Arial;fontSize=16;align=center;verticalAlign=middle;spacing=8;\" vertex=\"1\" parent=\"1\"><mxGeometry width=\"230\" height=\"72\" as=\"geometry\"/></mxCell></root></mxGraphModel>"
+  },
+  {
+    "title": "Logic Authorization Gate",
+    "tags": "logic authorization validity condition guard safety hexagon",
+    "w": 190,
+    "h": 90,
+    "xml": "<mxGraphModel><root><mxCell id=\"0\"/><mxCell id=\"1\" parent=\"0\"/><mxCell id=\"2\" value=\"&lt;b&gt;LOGIC GATE&lt;/b&gt;&lt;br&gt;authorized / valid\" style=\"shape=hexagon;perimeter=hexagonPerimeter2;rounded=1;arcSize=12;size=0.1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;gradientColor=#E7E7E7;gradientDirection=south;strokeColor=#7B7B78;strokeWidth=1.5;shadow=1;shadowColor=#000000;shadowOpacity=18;shadowOffsetX=0;shadowOffsetY=4;shadowBlur=6;fontColor=#1A1A1A;fontFamily=Inter,Helvetica,Arial;fontSize=15;align=center;verticalAlign=middle;spacing=12;spacingLeft=14;spacingRight=14;\" vertex=\"1\" parent=\"1\"><mxGeometry width=\"190\" height=\"90\" as=\"geometry\"/></mxCell></root></mxGraphModel>"
+  },
+  {
+    "title": "Ownership Arbiter",
+    "tags": "arbiter arbitration ownership exclusive writer rate frame safety",
+    "w": 260,
+    "h": 105,
+    "xml": "<mxGraphModel><root><mxCell id=\"0\"/><mxCell id=\"1\" parent=\"0\"/><mxCell id=\"2\" value=\"&lt;b&gt;OWNERSHIP ARBITER&lt;/b&gt;&lt;br&gt;one actuator-intent writer&lt;br&gt;per rate frame\" style=\"shape=rectangle;perimeter=rectanglePerimeter;rounded=1;absoluteArcSize=1;arcSize=24;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#FFFFFF;gradientColor=#E7E7E7;gradientDirection=south;strokeColor=#1A1A1A;strokeWidth=2;shadow=1;shadowColor=#000000;shadowOpacity=18;shadowOffsetX=0;shadowOffsetY=4;shadowBlur=6;fontColor=#1A1A1A;fontFamily=Inter,Helvetica,Arial;fontSize=15;align=center;verticalAlign=middle;spacing=8;spacingTop=10;spacingBottom=10;spacingLeft=18;spacingRight=18;\" vertex=\"1\" parent=\"1\"><mxGeometry width=\"260\" height=\"105\" as=\"geometry\"/></mxCell></root></mxGraphModel>"
+  },
+  {
+    "title": "Atomic Transition",
+    "tags": "atomic transition handoff lifecycle action capsule switch",
+    "w": 230,
+    "h": 80,
+    "xml": "<mxGraphModel><root><mxCell id=\"0\"/><mxCell id=\"1\" parent=\"0\"/><mxCell id=\"2\" value=\"&lt;b&gt;ATOMIC TRANSITION&lt;/b&gt;&lt;br&gt;same-frame handoff\" style=\"shape=rectangle;perimeter=rectanglePerimeter;rounded=1;absoluteArcSize=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#E7E7E7;gradientColor=#FFFFFF;gradientDirection=south;strokeColor=#7B7B78;strokeWidth=1.5;shadow=1;shadowColor=#000000;shadowOpacity=12;shadowOffsetX=0;shadowOffsetY=3;shadowBlur=5;fontColor=#5F5F5C;fontFamily=Inter,Helvetica,Arial;fontSize=15;align=center;verticalAlign=middle;spacing=10;\" vertex=\"1\" parent=\"1\"><mxGeometry width=\"230\" height=\"80\" as=\"geometry\"/></mxCell></root></mxGraphModel>"
   },
   {
     "title": "Summing Point (+/−)",
